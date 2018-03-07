@@ -1,9 +1,6 @@
 import requests
-
-payload = {'channel':'random', 'username':'HQ Bot', 'icon_emoji':'clock3:', 'text':'[TEST] HQ starts in 15 minutes!'}
-
-r = requests.post("http://httpbin.org/post", data=payload)
-
-print(r)
-
-r.status_code
+url = open("url.txt", "r")
+url_request = url.readline()
+payload = {'channel':'testest', 'username':'HQ Bot', 'icon_emoji':':clock3:', 'text':'[TEST] HQ starts in 15 minutes!'}
+r = requests.post(url_request, json=payload)
+url.close()
