@@ -6,6 +6,9 @@ __pycache__/
 # Apple crap
 .DS_Store
 
+# PyCharm
+.idea/
+
 # C extensions
 *.so
 
